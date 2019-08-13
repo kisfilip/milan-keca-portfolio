@@ -12,5 +12,5 @@ A modern, responsive and minimalistic portfolio website
 ### Technologies
 
 1. HTML5
-2. CSS3
+2. CSS3 (SCSS)
 3. JavaScript

@@ -1,0 +1,175 @@
+body {
+  overscroll-behavior: none;
+}
+
+.site-wrapper {
+  position: fixed;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Cutive Mono', monospace;
+  cursor: default;
+  user-select: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.loading-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100vh;
+  z-index: 100;
+}
+
+.loading-section--hidden {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.loading-section--removed {
+  display: none;
+}
+
+.background-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.background-section__accent {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  bottom: 0;
+  left: 55%;
+  background: #08090a;
+}
+
+.navigation-section {
+  position: fixed;
+  z-index: 10;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    width: 97vh;
+    transform-origin: bottom left;
+    transform: rotate(-90deg) translate(-97%, 100%);
+    font-size: 1.2rem;
+  }
+  li {
+    padding: 0 0.4rem 0.2rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 1s ease;
+    &.active {
+      color: #f4faff;
+      background: #08090a;
+      border-bottom-left-radius: 0.2rem;
+      border-bottom-right-radius: 0.2rem;
+    }
+  }
+}
+
+.scroll-section {
+  position: absolute;
+  width: 100%;
+}
+
+.scroll-down-section {
+  right: 45%;
+  .page {
+    align-items: flex-end;
+  }
+}
+
+.scroll-up-section {
+  color: #f4faff;
+  display: flex;
+  flex-direction: column-reverse;
+  left: 55%;
+  .page {
+    align-items: flex-start;
+    max-width: 35vw;
+  }
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  &::before {
+    display: block;
+    content: '';
+    height: 20%;
+  }
+}
+
+.page__heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio__milan-name {
+  font-family: 'East Sea Dokdo', cursive;
+  font-size: 4rem;
+}
+
+.portfolio__down-arrow {
+  position: absolute;
+  right: 2rem;
+  bottom: 5rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+  &:hover {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+.about-me__portrait-image {
+  background-image: url("./images/portrait.jpg");
+  background-size: contain;
+  width: 45vmin;
+  height: 45vmin;
+  border-radius: 50%;
+  position: relative;
+  left: 1rem;
+  border: 2px solid #111;
+}
+
+.skills__initials, .skills__text {
+  font-size: 1.5rem;
+}
+
+.contact__initials, .contact__text {
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+}
+
+.contact__initials a {
+  color: #08090a;
+}
+
+.contact__text a {
+  color: #f4faff;
+}
+
